@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.moka.graphql-convert</id>
+    <name>Graphql Schema Convert</name>
+    <vendor email="example@email.com" url="http://www.example.com">Moka</vendor>
+
+    <description><![CDATA[
+    Converts a graphql type schema to a kotlin data class.<br>
+    The data class will then be inserted in the currently open editor
+    ]]></description>
+
+    <!-- depends on Java support (Idea, Android Studio) -->
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="com.moka.graphql-convert.actions.ConvertAction" class="actions.ConvertAction"
+                text="Convert GraphQL Scheme" description="Starts GraphQL conversion process" icon="Icons.GRAPHQL_ICON">
+            <add-to-group group-id="NavBarToolBar" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenuDebug" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
